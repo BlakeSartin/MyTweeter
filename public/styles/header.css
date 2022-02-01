@@ -1,0 +1,13 @@
+header{
+  display: flex;
+  height: 400px;
+  width:100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items:center;
+  background-color: pink;
+  background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
+  line-height: 0.1em;
+}
+
+
