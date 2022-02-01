@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> -->
+<script src="https://kit.fontawesome.com/6f4a74b5a8.js" crossorigin="anonymous"></script>
+
     
 
     <!-- App CSS -->
@@ -23,6 +25,7 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script src="scripts/compose-char-counter.js"></script>
   </head>
 
   <body>
@@ -56,6 +59,30 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section>
+      <section id ="tweet-container">
+        <article class="tweet">
+          <header class="tweet-header">
+            <div>
+            <img src="/images/profile-hex.png"style="width:4em; height:4em;">
+            <h4>Your Name</h4>
+          </div>
+          <div>
+          <h4>UserName</h4>
+        </div>
+          </header>
+          <div class="tweet-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique maxime illum accusamus numquam. Et sit architecto totam vel numquam doloribus expedita, sed, minima molestias sint autem ipsa aperiam ullam natus.
+          </div>
+          <footer class="tweet-footer">
+            <span>Time tweet was posted</span>
+            <div>
+              <i class="fas fa-flag fa-sm"></i>
+              <i class="fas fa-retweet fa-sm"></i>
+              <i class="fas fa-heart fa-sm"></i>
+            </div>
+          </footer>
+        </article>
       </section>
     </main>
     

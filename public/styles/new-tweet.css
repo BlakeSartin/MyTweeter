@@ -9,9 +9,7 @@
 
 .new-tweet{
   width:100%;
-  margin:auto;
-  margin-top:34px;
-
+  margin:34px auto;
 }
  
 .new-tweet form div button{
