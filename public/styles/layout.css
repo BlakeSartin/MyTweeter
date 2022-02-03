@@ -34,13 +34,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#tweet-container{
+#tweets-container{
   display: flex;
   justify-content: center;
-  flex-direction: center;
-  border-style: solid;
+  flex-direction: column;
   padding: .5em;
   
+}
+.tweet{
+  border-style: solid;
+  margin-bottom: 1em;
 }
 
 .tweet-header{
