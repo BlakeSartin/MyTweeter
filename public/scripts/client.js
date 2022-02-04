@@ -4,21 +4,66 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+// const { post } = require("request");
+
 
 
 
 $(() => {
+  $(".nav_newtweet").click(function(event){
+    if($('#compose-tweet').css("display") === "none") {
+    $("#compose-tweet").slideDown()
+    }else{
+      $("#compose-tweet").slideUp()
+    }
+  })
+
+//Tweet Submission
+  $("#compose-tweet").submit(function(event){
+    event.preventDefault()
+    console.log("submitting form!")
+    const data = $(this).serialize()
+    const textData = data.slice(6)
+    console.log(textData)
+    if (!textData) {
+      $('.empty-tweet').slideDown()
+      return
+    } 
+    if(textData.length >140) {
+      $('.too-long').slideDown()
+      return
+    }
+    $.ajax({
+      type:"POST",
+      url: "/tweets",
+      data: data,
+    }).then(() => {
+      loadTweets()
+      $('.too-long').slideUp()
+      $('.empty-tweet').slideUp()
+      $("#tweet-text").val('')
+    })   
+  })
+ 
+
+
   const renderTweets = function (tweets) {
     $("#tweets-container").empty();
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       $("#tweets-container").prepend($tweet);
-      
     }
-    // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
-  };
+    
+  }
+  
+ 
+
+  const loadTweets = function(){
+    $.get("/tweets", function(data){
+      renderTweets(data);
+    });
+  }
+
   const createTweetElement = function (tweetObject) {
     console.log(tweetObject)
     const $tweet = $("<article>").addClass("tweet");
@@ -59,19 +104,10 @@ $(() => {
     return $tweet;
   };
 
-  const tweetData = {
-    user: {
-      name: "Newton",
-      avatars: "https://i.imgur.com/73hZDYK.png",
-      handle: "@SirIsaac",
-    },
-    content: {
-      text: "If I have seen further it is by standing on the shoulders of giants",
-    },
-    created_at: 1461116232227,
-  };
+loadTweets()
 
-  renderTweets([tweetData, tweetData])
+
+
 });
 
 

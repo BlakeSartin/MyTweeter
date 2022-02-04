@@ -38,7 +38,8 @@
         <i class="fas fa-angle-double-down form-toggle"></i>
       </div>
     </nav>
-    <header>
+    <div id="header-main">
+    <header id="page-header">
       <div>
           <img src="/images/profile-hex.png"style="width:8em; height:8em;"> 
       </div>
@@ -51,8 +52,9 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form>
+        <p class= 'too-long'>This tweet is too long!</p>
+        <p class= 'empty-tweet'>This tweet can't be empty!</p>
+        <form id="compose-tweet">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text" ></textarea>
           <div>
@@ -86,6 +88,7 @@
         </article> -->
       </section>
     </main>
+  </div>
     
   </body>
 </html>
