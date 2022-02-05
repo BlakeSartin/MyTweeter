@@ -6,6 +6,7 @@ f your tweet is empty or over 140 cahracters your tweet will be rejected!
 In the header you are able to see your profile picture and name, and available underneath are all tweets in ascending oder starting at most recent!
 All tweets include your name, picture, handle, and how long ago your tweet was submitted.
 There are three buttons in the bottom left of the tweet box. These buttons change color as you hover over them, and are waiting to be implemented in any way you choose!
+The layout of Tweeter will adjust between desktop and iphone sizes!
 
 
 
