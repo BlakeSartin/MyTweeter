@@ -1,8 +1,13 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple, single-page Twitter clone. 
+By pressing the new tweet button, our tweet composition box will become visible. Here you may write anything you want under 140 characters and submit using the TWEET button. I
+f your tweet is empty or over 140 cahracters your tweet will be rejected! 
+In the header you are able to see your profile picture and name, and available underneath are all tweets in ascending oder starting at most recent!
+All tweets include your name, picture, handle, and how long ago your tweet was submitted.
+There are three buttons in the bottom left of the tweet box. These buttons change color as you hover over them, and are waiting to be implemented in any way you choose!
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+
 
 ## Getting Started
 
@@ -16,3 +21,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Body Parser
+- Chance
+- MD5
+- TimeAgo
