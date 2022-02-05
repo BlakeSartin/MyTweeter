@@ -1,0 +1,41 @@
+$font-family: "Bungee";
+$background-color: #4056A1;
+$color:#FFFFFF;
+$font-family-label: Arial, Helvetica, sans-serif;
+
+
+.new-tweet form div{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  font-family: $font-family
+
+}
+
+.new-tweet{
+  width:100%;
+  margin:34px auto;
+}
+ 
+.new-tweet form div button{
+  background-color:$background-color;
+  color:$color
+
+}
+
+.new-tweet form label{
+  font-family: $font-family-label;
+  font-weight: bold;
+}
+
+.new-tweet textarea{
+  padding: 5px;
+  width: 100%;
+  background-color:transparent;
+  border: none;
+  border-bottom:5px solid black;
+  height: 50px;
+  outline: none;
+  overflow: auto;
+}
