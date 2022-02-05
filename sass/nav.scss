@@ -1,14 +1,14 @@
-$background-color:#4056A1;
-$color: #FFFFFF;
-$font-family-header:"Bungee", sans-serif;
-$font-family-nav:Arial, Helvetica, sans-serif;
-$arrow-color:red;
+$background-color: #4056a1;
+$color: #ffffff;
+$font-family-header: "Bungee", sans-serif;
+$font-family-nav: Arial, Helvetica, sans-serif;
+$arrow-color: red;
 
-nav{
-  display:flex;
+nav {
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  position:fixed;
+  position: fixed;
   top: 0;
   height: 120px;
   width: 100%;
@@ -17,40 +17,38 @@ nav{
   font-family: $font-family-header;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  span{
+  span {
     font-size: 50px;
   }
 }
 
-.nav_newtweet{
+.nav_newtweet {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   font-family: $font-family-nav;
-  p > span{
+  p > span {
     font-size: 30px;
     font-weight: bold;
   }
-  i{
+  i {
     margin-top: -1.2rem;
-    color:$arrow-color;
+    color: $arrow-color;
     cursor: pointer;
   }
-  
 }
-
 
 @keyframes arrowMovements {
-  from{
-    transform: translate3d(0,-5px,0);
+  from {
+    transform: translate3d(0, -5px, 0);
   }
-  to{
-    transform: translate3d(0,5px,0);
+  to {
+    transform: translate3d(0, 5px, 0);
   }
 }
-.nav_newtweet i:hover{
+.nav_newtweet i:hover {
   animation: arrowMovements 0.5s;
   animation-direction: alternate;
   animation-iteration-count: infinite;

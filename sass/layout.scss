@@ -3,12 +3,12 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
- $background-color: #FFFFFF;
- $color:#4056A1;
- $font-family-body: "Source Sans Pro", sans-serif;
- $font-family-main: Arial, Helvetica, sans-serif;
+$background-color: #ffffff;
+$color: #4056a1;
+$font-family-body: "Source Sans Pro", sans-serif;
+$font-family-main: Arial, Helvetica, sans-serif;
 
- html {
+html {
   box-sizing: border-box;
 }
 *,
@@ -25,7 +25,7 @@ body {
   color: #545149;
   background-color: $background-color;
   font-size: 24px;
-  font-family: $font-family-body
+  font-family: $font-family-body;
 }
 
 /*
@@ -38,7 +38,7 @@ main {
   flex-direction: column;
   margin: 0 auto;
   background-color: $background-color;
-  font-family: $font-family-main
+  font-family: $font-family-main;
 }
 
 #tweets-container {
@@ -75,10 +75,9 @@ main {
   border-bottom-style: solid;
   /* margin-bottom: 0.5em; */
   padding: 0 1em 0 1em;
-  
 }
 
-.tweet-text p{
+.tweet-text p {
   margin: 0;
   padding: 0.5em;
 }
@@ -89,10 +88,9 @@ main {
   justify-content: space-between;
   font-size: smaller;
   padding: 0.2em;
-  
 }
 .tweet-footer div {
-  color:$color;
+  color: $color;
   cursor: pointer;
 }
 .tweet-footer div i:hover {
@@ -130,13 +128,11 @@ main {
   #compose-tweet {
     width: 100%;
   }
-  #tweets-container{
+  #tweets-container {
     width: 100%;
-    margin-left: 2rem
+    margin-left: 2rem;
   }
-  .tweet-header{
+  .tweet-header {
     margin-top: 5px;
-    
-   
   }
 }

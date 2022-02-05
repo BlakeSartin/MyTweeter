@@ -6,46 +6,41 @@
 
 // const { post } = require("request");
 
-
-
-
 $(() => {
-  $(".nav_newtweet").click(function(event){
-    if($('#compose-tweet').css("display") === "none") {
-    $("#compose-tweet").slideDown()
-    }else{
-      $("#compose-tweet").slideUp()
+  $(".nav_newtweet").click(function (event) {
+    if ($("#compose-tweet").css("display") === "none") {
+      $("#compose-tweet").slideDown();
+    } else {
+      $("#compose-tweet").slideUp();
     }
-  })
+  });
 
-//Tweet Submission
-  $("#compose-tweet").submit(function(event){
-    event.preventDefault()
-    console.log("submitting form!")
-    const data = $(this).serialize()
-    const textData = data.slice(6)
-    console.log(textData)
+  //Tweet Submission
+  $("#compose-tweet").submit(function (event) {
+    event.preventDefault();
+    console.log("submitting form!");
+    const data = $(this).serialize();
+    const textData = data.slice(6);
+    console.log(textData);
     if (!textData) {
-      $('.empty-tweet').slideDown()
-      return
-    } 
-    if(textData.length >140) {
-      $('.too-long').slideDown()
-      return
+      $(".empty-tweet").slideDown();
+      return;
+    }
+    if (textData.length > 140) {
+      $(".too-long").slideDown();
+      return;
     }
     $.ajax({
-      type:"POST",
+      type: "POST",
       url: "/tweets",
       data: data,
     }).then(() => {
-      loadTweets()
-      $('.too-long').slideUp()
-      $('.empty-tweet').slideUp()
-      $("#tweet-text").val('')
-    })   
-  })
- 
-
+      loadTweets();
+      $(".too-long").slideUp();
+      $(".empty-tweet").slideUp();
+      $("#tweet-text").val("");
+    });
+  });
 
   const renderTweets = function (tweets) {
     $("#tweets-container").empty();
@@ -53,19 +48,16 @@ $(() => {
       const $tweet = createTweetElement(tweet);
       $("#tweets-container").prepend($tweet);
     }
-    
-  }
-  
- 
+  };
 
-  const loadTweets = function(){
-    $.get("/tweets", function(data){
+  const loadTweets = function () {
+    $.get("/tweets", function (data) {
       renderTweets(data);
     });
-  }
+  };
 
   const createTweetElement = function (tweetObject) {
-    console.log(tweetObject)
+    console.log(tweetObject);
     const $tweet = $("<article>").addClass("tweet");
 
     const $img = $("<img>").attr("src", tweetObject.user.avatars);
@@ -104,11 +96,5 @@ $(() => {
     return $tweet;
   };
 
-loadTweets()
-
-
-
+  loadTweets();
 });
-
-
-  

@@ -1,20 +1,19 @@
-$background-color:pink;
+$background-color: pink;
 @mixin page-header {
   display: flex;
   height: 400px;
-  width:100%;
+  width: 100%;
   flex-direction: column;
   justify-content: flex-end;
-  align-items:center;
+  align-items: center;
   background-color: $background-color;
   background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
   line-height: 0.1em;
 }
 
-#page-header{
+#page-header {
   @include page-header;
 }
-
 
 @media (min-width: 800px) {
   #page-header {
@@ -24,5 +23,5 @@ $background-color:pink;
     margin-top: 4.5em;
     margin-right: 5em;
     margin-left: 2em;
-}
+  }
 }
